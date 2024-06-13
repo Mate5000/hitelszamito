@@ -1,5 +1,5 @@
 <?php
-// api/loanCalculator.php
+
 
 header('Content-Type: application/json');
 
@@ -9,7 +9,7 @@ $ktart = $data['ktart'];
 $ekamat = $data['ekamat'];
 $torl = $data['torl'];
 
-// Convert annual rate to monthly and calculate monthly payment
+
 $monthlyRate = ($ekamat / 100) / 12;
 $havifizetendo = $ktart * $monthlyRate / (1 - pow(1 + $monthlyRate, -$torl));
 $osszfizetendo = $havifizetendo * $torl;
