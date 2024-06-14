@@ -6,7 +6,7 @@ th{
 td{
     border-bottom: 1px solid gray;
 }
-#jelentesek {
+#jelentesek, #jelentesek2, #mukodes1, #mukodes2 {
     cursor: pointer;
     text-decoration: underline;
 }

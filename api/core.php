@@ -9,9 +9,8 @@ $ktart = $data['ktart'];
 $ekamat = $data['ekamat'];
 $torl = $data['torl'];
 
-
-$monthlyRate = ($ekamat / 100) / 12;
-$havifizetendo = $ktart * $monthlyRate / (1 - pow(1 + $monthlyRate, -$torl));
+$havikamat = ($ekamat / 100) / 12;
+$havifizetendo = $ktart * $havikamat / (1 - pow(1 + $havikamat, -$torl));
 $osszfizetendo = $havifizetendo * $torl;
 $osszkamat = $osszfizetendo - $ktart;
 
@@ -20,7 +19,7 @@ $egyenleg = $ktart;
 $eddigfiz = 0;
 
 for ($i = 0; $i < $torl; $i++) {
-    $interest = $egyenleg * $monthlyRate;
+    $interest = $egyenleg * $havikamat;
     $pcfizet = $havifizetendo - $interest;
     $egyenleg -= $pcfizet;
     $eddigfiz += $havifizetendo;
